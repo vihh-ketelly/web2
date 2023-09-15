@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style1.css">
+    <link rel="stylesheet" href="style2.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
     href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&family=Roboto:wght@400;500;700&display=swap"
     rel="stylesheet">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/5.5.2/css/ionicons.min.css">
     <title>Produtos</title>
 </head>
 <body>
@@ -64,29 +64,10 @@
                   <ul class="card-action-list">
 
                     <li class="card-action-item">
-                      <button class="card-action-btn" aria-labelledby="card-label-1">
+                      <button class="card-action-btn" aria-labelledby="card-label-1" onclick="adicionarAoCarrinho('Produto 1')">
                         <ion-icon name="cart-outline"></ion-icon>
-                      </button>
-
-                      <div class="card-action-tooltip" id="card-label-1">Adicionar ao Carrinho</div>
+                    </button>
                     </li>
-
-                    <li class="card-action-item">
-                      <button class="card-action-btn" aria-labelledby="card-label-2">
-                        <ion-icon name="heart-outline"></ion-icon>
-                      </button>
-
-                      <div class="card-action-tooltip" id="card-label-2">Adicionar aos Favoritos</div>
-                    </li>
-
-                    <li class="card-action-item">
-                      <button class="card-action-btn" aria-labelledby="card-label-3">
-                        <ion-icon name="eye-outline"></ion-icon>
-                      </button>
-
-                      <div class="card-action-tooltip" id="card-label-3">Visão</div>
-                    </li>
-
                   </ul>
                 </figure>
 
@@ -105,65 +86,43 @@
 
 
 
+<script>
+  // Produtos.html
+function adicionarAoCarrinho(nome, imagem) {
+    const carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
 
+    // Crie um objeto de produto com nome e imagem
+    const produto = { nome, imagem };
 
+    carrinho.push(produto);
+    localStorage.setItem('carrinho', JSON.stringify(carrinho));
+    alert(`${nome} adicionado ao carrinho!`);
+}
 
+</script>
 
-            <li class="product-item guitarras" data-category="guitarras">
-                <div class="product-card" tabindex="0">
-  
-                  <figure class="card-banner">
-                    <img src="./imgs/guitarra1.jpg" width="312" height="350" loading="lazy"
-                      alt="Instrumentos" class="image-contain">
-  
-                    <div class="card-badge">Novo</div>
-  
-                    <ul class="card-action-list">
-  
-                      <li class="card-action-item">
-                        <button class="card-action-btn" aria-labelledby="card-label-1">
-                          <ion-icon name="cart-outline"></ion-icon>
-                        </button>
-  
-                        <div class="card-action-tooltip" id="card-label-1">Adicionar ao Carrinho</div>
-                      </li>
-  
-                      <li class="card-action-item">
-                        <button class="card-action-btn" aria-labelledby="card-label-2">
-                          <ion-icon name="heart-outline"></ion-icon>
-                        </button>
-  
-                        <div class="card-action-tooltip" id="card-label-2">Adicionar aos Favoritos</div>
-                      </li>
-  
-                      <li class="card-action-item">
-                        <button class="card-action-btn" aria-labelledby="card-label-3">
-                          <ion-icon name="eye-outline"></ion-icon>
-                        </button>
-  
-                        <div class="card-action-tooltip" id="card-label-3">Visão</div>
-                      </li>
-  
-                    </ul>
-                  </figure>
-  
-                  <div class="card-content">
-  
-                    <h3 class="h3 card-title">
-                      <a href="#">Fender Player Stratocaster HSS Maple Fingerboard Guitarra Elétrica Tidepool </a>
-                    </h3>
-  
-                    <data class="card-price" value="4385,22">R$4385,22</data>
-  
-                  </div>
-  
-                </div>
-              </li>
+           <li class="product-item guitarras" data-category="guitarras">
+            <!-- Produtos.html -->
+<div class="product-card" tabindex="0">
+  <figure class="card-banner">
+      <img src="./imgs/guitarra1.jpg" width="312" height="350" loading="lazy" alt="Instrumentos" class="image-contain">
+      <div class="card-badge">Novo</div>
+  </figure>
+  <div class="card-content">
+      <h3 class="h3 card-title">
+          <a href="#">Fender Player Stratocaster HSS Maple Fingerboard Guitarra Elétrica Tidepool</a>
+      </h3>
+      <data class="card-price" value="4385,22">R$4385,22</data>
+      <button class="card-action-btn" aria-labelledby="card-label-3" onclick="adicionarAoCarrinho()">
+        <ion-icon name="cart-outline"></ion-icon>
+      </button>
+  </div>
+</div>
 
-              <li class="product-item baterias" data-category="baterias">
-                <div class="product-card" tabindex="0">
-  
-                  <figure class="card-banner">
+</li>
+<li class="product-item baterias" data-category="baterias">
+        <div class="product-card" tabindex="0">
+          <figure class="card-banner">
                     <img src="./imgs/bateria1.jpg" width="312" height="350" loading="lazy"
                       alt="Instrumentos" class="image-contain">
   
@@ -172,42 +131,19 @@
                     <ul class="card-action-list">
   
                       <li class="card-action-item">
-                        <button class="card-action-btn" aria-labelledby="card-label-1">
+                        <button class="card-action-btn" aria-labelledby="card-label-3" onclick="adicionarAoCarrinho()">
                           <ion-icon name="cart-outline"></ion-icon>
                         </button>
-  
-                        <div class="card-action-tooltip" id="card-label-1">Adicionar ao Carrinho</div>
                       </li>
-  
-                      <li class="card-action-item">
-                        <button class="card-action-btn" aria-labelledby="card-label-2">
-                          <ion-icon name="heart-outline"></ion-icon>
-                        </button>
-  
-                        <div class="card-action-tooltip" id="card-label-2">Adicionar aos Favoritos</div>
-                      </li>
-  
-                      <li class="card-action-item">
-                        <button class="card-action-btn" aria-labelledby="card-label-3">
-                          <ion-icon name="eye-outline"></ion-icon>
-                        </button>
-  
-                        <div class="card-action-tooltip" id="card-label-3">Visão</div>
-                      </li>
-  
                     </ul>
                   </figure>
   
                   <div class="card-content">
-  
                     <h3 class="h3 card-title">
                       <a href="#">Bateria Armory Fusion AR504S Shell Pack Mapex - Ultramarine (UM)</a>
                     </h3>
-  
                     <data class="card-price" value="12.000,00">R$12.000,00</data>
-  
                   </div>
-  
                 </div>
               </li>
 
@@ -223,28 +159,14 @@
                     <ul class="card-action-list">
   
                       <li class="card-action-item">
-                        <button class="card-action-btn" aria-labelledby="card-label-1">
+                        <button class="card-action-btn" aria-labelledby="card-label-4" onclick="adicionarAoCarrinho()">
                           <ion-icon name="cart-outline"></ion-icon>
                         </button>
   
-                        <div class="card-action-tooltip" id="card-label-1">Adicionar ao Carrinho</div>
+                        
                       </li>
   
-                      <li class="card-action-item">
-                        <button class="card-action-btn" aria-labelledby="card-label-2">
-                          <ion-icon name="heart-outline"></ion-icon>
-                        </button>
-  
-                        <div class="card-action-tooltip" id="card-label-2">Adicionar aos Favoritos</div>
-                      </li>
-  
-                      <li class="card-action-item">
-                        <button class="card-action-btn" aria-labelledby="card-label-3">
-                          <ion-icon name="eye-outline"></ion-icon>
-                        </button>
-  
-                        <div class="card-action-tooltip" id="card-label-3">Visão</div>
-                      </li>
+                      
   
                     </ul>
                   </figure>
@@ -274,28 +196,14 @@
                     <ul class="card-action-list">
   
                       <li class="card-action-item">
-                        <button class="card-action-btn" aria-labelledby="card-label-1">
+                        <button class="card-action-btn" aria-labelledby="card-label-5" onclick="adicionarAoCarrinho()">
                           <ion-icon name="cart-outline"></ion-icon>
                         </button>
   
-                        <div class="card-action-tooltip" id="card-label-1">Adicionar ao Carrinho</div>
+                        
                       </li>
   
-                      <li class="card-action-item">
-                        <button class="card-action-btn" aria-labelledby="card-label-2">
-                          <ion-icon name="heart-outline"></ion-icon>
-                        </button>
-  
-                        <div class="card-action-tooltip" id="card-label-2">Adicionar aos Favoritos</div>
-                      </li>
-  
-                      <li class="card-action-item">
-                        <button class="card-action-btn" aria-labelledby="card-label-3">
-                          <ion-icon name="eye-outline"></ion-icon>
-                        </button>
-  
-                        <div class="card-action-tooltip" id="card-label-3">Visão</div>
-                      </li>
+                      
   
                     </ul>
                   </figure>
@@ -325,29 +233,16 @@
                     <ul class="card-action-list">
   
                       <li class="card-action-item">
-                        <button class="card-action-btn" aria-labelledby="card-label-1">
+                        <button class="card-action-btn" aria-labelledby="card-label-6" onclick="adicionarAoCarrinho()">
                           <ion-icon name="cart-outline"></ion-icon>
                         </button>
   
-                        <div class="card-action-tooltip" id="card-label-1">Adicionar ao Carrinho</div>
+                        
                       </li>
   
-                      <li class="card-action-item">
-                        <button class="card-action-btn" aria-labelledby="card-label-2">
-                          <ion-icon name="heart-outline"></ion-icon>
-                        </button>
+                      
   
-                        <div class="card-action-tooltip" id="card-label-2">Adicionar aos Favoritos</div>
-                      </li>
-  
-                      <li class="card-action-item">
-                        <button class="card-action-btn" aria-labelledby="card-label-3">
-                          <ion-icon name="eye-outline"></ion-icon>
-                        </button>
-  
-                        <div class="card-action-tooltip" id="card-label-3">Visão</div>
-                      </li>
-  
+                        
                     </ul>
                   </figure>
   
@@ -384,21 +279,7 @@
                       </li>
   
                       <li class="card-action-item">
-                        <button class="card-action-btn" aria-labelledby="card-label-2">
-                          <ion-icon name="heart-outline"></ion-icon>
-                        </button>
-  
-                        <div class="card-action-tooltip" id="card-label-2">Adicionar aos Favoritos</div>
-                      </li>
-  
-                      <li class="card-action-item">
-                        <button class="card-action-btn" aria-labelledby="card-label-3">
-                          <ion-icon name="eye-outline"></ion-icon>
-                        </button>
-  
-                        <div class="card-action-tooltip" id="card-label-3">Visão</div>
-                      </li>
-  
+                       
                     </ul>
                   </figure>
   
@@ -434,21 +315,7 @@
                         <div class="card-action-tooltip" id="card-label-1">Adicionar ao Carrinho</div>
                       </li>
   
-                      <li class="card-action-item">
-                        <button class="card-action-btn" aria-labelledby="card-label-2">
-                          <ion-icon name="heart-outline"></ion-icon>
-                        </button>
-  
-                        <div class="card-action-tooltip" id="card-label-2">Adicionar aos Favoritos</div>
-                      </li>
-  
-                      <li class="card-action-item">
-                        <button class="card-action-btn" aria-labelledby="card-label-3">
-                          <ion-icon name="eye-outline"></ion-icon>
-                        </button>
-  
-                        <div class="card-action-tooltip" id="card-label-3">Visão</div>
-                      </li>
+                      
   
                     </ul>
                   </figure>
@@ -485,21 +352,7 @@
                         <div class="card-action-tooltip" id="card-label-1">Adicionar ao Carrinho</div>
                       </li>
   
-                      <li class="card-action-item">
-                        <button class="card-action-btn" aria-labelledby="card-label-2">
-                          <ion-icon name="heart-outline"></ion-icon>
-                        </button>
-  
-                        <div class="card-action-tooltip" id="card-label-2">Adicionar aos Favoritos</div>
-                      </li>
-  
-                      <li class="card-action-item">
-                        <button class="card-action-btn" aria-labelledby="card-label-3">
-                          <ion-icon name="eye-outline"></ion-icon>
-                        </button>
-  
-                        <div class="card-action-tooltip" id="card-label-3">Visão</div>
-                      </li>
+                      
   
                     </ul>
                   </figure>
@@ -536,21 +389,7 @@
                         <div class="card-action-tooltip" id="card-label-1">Adicionar ao Carrinho</div>
                       </li>
   
-                      <li class="card-action-item">
-                        <button class="card-action-btn" aria-labelledby="card-label-2">
-                          <ion-icon name="heart-outline"></ion-icon>
-                        </button>
-  
-                        <div class="card-action-tooltip" id="card-label-2">Adicionar aos Favoritos</div>
-                      </li>
-  
-                      <li class="card-action-item">
-                        <button class="card-action-btn" aria-labelledby="card-label-3">
-                          <ion-icon name="eye-outline"></ion-icon>
-                        </button>
-  
-                        <div class="card-action-tooltip" id="card-label-3">Visão</div>
-                      </li>
+                      
   
                     </ul>
                   </figure>
@@ -587,21 +426,7 @@
                         <div class="card-action-tooltip" id="card-label-1">Adicionar ao Carrinho</div>
                       </li>
   
-                      <li class="card-action-item">
-                        <button class="card-action-btn" aria-labelledby="card-label-2">
-                          <ion-icon name="heart-outline"></ion-icon>
-                        </button>
-  
-                        <div class="card-action-tooltip" id="card-label-2">Adicionar aos Favoritos</div>
-                      </li>
-  
-                      <li class="card-action-item">
-                        <button class="card-action-btn" aria-labelledby="card-label-3">
-                          <ion-icon name="eye-outline"></ion-icon>
-                        </button>
-  
-                        <div class="card-action-tooltip" id="card-label-3">Visão</div>
-                      </li>
+                      
   
                     </ul>
                   </figure>
@@ -637,21 +462,7 @@
                         <div class="card-action-tooltip" id="card-label-1">Adicionar ao Carrinho</div>
                       </li>
   
-                      <li class="card-action-item">
-                        <button class="card-action-btn" aria-labelledby="card-label-2">
-                          <ion-icon name="heart-outline"></ion-icon>
-                        </button>
-  
-                        <div class="card-action-tooltip" id="card-label-2">Adicionar aos Favoritos</div>
-                      </li>
-  
-                      <li class="card-action-item">
-                        <button class="card-action-btn" aria-labelledby="card-label-3">
-                          <ion-icon name="eye-outline"></ion-icon>
-                        </button>
-  
-                        <div class="card-action-tooltip" id="card-label-3">Visão</div>
-                      </li>
+                      
   
                     </ul>
                   </figure>
@@ -688,21 +499,7 @@
                         <div class="card-action-tooltip" id="card-label-1">Adicionar ao Carrinho</div>
                       </li>
   
-                      <li class="card-action-item">
-                        <button class="card-action-btn" aria-labelledby="card-label-2">
-                          <ion-icon name="heart-outline"></ion-icon>
-                        </button>
-  
-                        <div class="card-action-tooltip" id="card-label-2">Adicionar aos Favoritos</div>
-                      </li>
-  
-                      <li class="card-action-item">
-                        <button class="card-action-btn" aria-labelledby="card-label-3">
-                          <ion-icon name="eye-outline"></ion-icon>
-                        </button>
-  
-                        <div class="card-action-tooltip" id="card-label-3">Visão</div>
-                      </li>
+                      
   
                     </ul>
                   </figure>
@@ -739,21 +536,7 @@
                         <div class="card-action-tooltip" id="card-label-1">Adicionar ao Carrinho</div>
                       </li>
   
-                      <li class="card-action-item">
-                        <button class="card-action-btn" aria-labelledby="card-label-2">
-                          <ion-icon name="heart-outline"></ion-icon>
-                        </button>
-  
-                        <div class="card-action-tooltip" id="card-label-2">Adicionar aos Favoritos</div>
-                      </li>
-  
-                      <li class="card-action-item">
-                        <button class="card-action-btn" aria-labelledby="card-label-3">
-                          <ion-icon name="eye-outline"></ion-icon>
-                        </button>
-  
-                        <div class="card-action-tooltip" id="card-label-3">Visão</div>
-                      </li>
+                      
   
                     </ul>
                   </figure>
@@ -790,21 +573,7 @@
                         <div class="card-action-tooltip" id="card-label-1">Adicionar ao Carrinho</div>
                       </li>
   
-                      <li class="card-action-item">
-                        <button class="card-action-btn" aria-labelledby="card-label-2">
-                          <ion-icon name="heart-outline"></ion-icon>
-                        </button>
-  
-                        <div class="card-action-tooltip" id="card-label-2">Adicionar aos Favoritos</div>
-                      </li>
-  
-                      <li class="card-action-item">
-                        <button class="card-action-btn" aria-labelledby="card-label-3">
-                          <ion-icon name="eye-outline"></ion-icon>
-                        </button>
-  
-                        <div class="card-action-tooltip" id="card-label-3">Visão</div>
-                      </li>
+                      
   
                     </ul>
                   </figure>
@@ -841,21 +610,7 @@
                         <div class="card-action-tooltip" id="card-label-1">Adicionar ao Carrinho</div>
                       </li>
   
-                      <li class="card-action-item">
-                        <button class="card-action-btn" aria-labelledby="card-label-2">
-                          <ion-icon name="heart-outline"></ion-icon>
-                        </button>
-  
-                        <div class="card-action-tooltip" id="card-label-2">Adicionar aos Favoritos</div>
-                      </li>
-  
-                      <li class="card-action-item">
-                        <button class="card-action-btn" aria-labelledby="card-label-3">
-                          <ion-icon name="eye-outline"></ion-icon>
-                        </button>
-  
-                        <div class="card-action-tooltip" id="card-label-3">Visão</div>
-                      </li>
+                     
   
                     </ul>
                   </figure>
@@ -892,21 +647,7 @@
                         <div class="card-action-tooltip" id="card-label-1">Adicionar ao Carrinho</div>
                       </li>
   
-                      <li class="card-action-item">
-                        <button class="card-action-btn" aria-labelledby="card-label-2">
-                          <ion-icon name="heart-outline"></ion-icon>
-                        </button>
-  
-                        <div class="card-action-tooltip" id="card-label-2">Adicionar aos Favoritos</div>
-                      </li>
-  
-                      <li class="card-action-item">
-                        <button class="card-action-btn" aria-labelledby="card-label-3">
-                          <ion-icon name="eye-outline"></ion-icon>
-                        </button>
-  
-                        <div class="card-action-tooltip" id="card-label-3">Visão</div>
-                      </li>
+                      
   
                     </ul>
                   </figure>
@@ -943,21 +684,7 @@
                         <div class="card-action-tooltip" id="card-label-1">Adicionar ao Carrinho</div>
                       </li>
   
-                      <li class="card-action-item">
-                        <button class="card-action-btn" aria-labelledby="card-label-2">
-                          <ion-icon name="heart-outline"></ion-icon>
-                        </button>
-  
-                        <div class="card-action-tooltip" id="card-label-2">Adicionar aos Favoritos</div>
-                      </li>
-  
-                      <li class="card-action-item">
-                        <button class="card-action-btn" aria-labelledby="card-label-3">
-                          <ion-icon name="eye-outline"></ion-icon>
-                        </button>
-  
-                        <div class="card-action-tooltip" id="card-label-3">Visão</div>
-                      </li>
+                      
   
                     </ul>
                   </figure>
@@ -994,21 +721,7 @@
                         <div class="card-action-tooltip" id="card-label-1">Adicionar ao Carrinho</div>
                       </li>
   
-                      <li class="card-action-item">
-                        <button class="card-action-btn" aria-labelledby="card-label-2">
-                          <ion-icon name="heart-outline"></ion-icon>
-                        </button>
-  
-                        <div class="card-action-tooltip" id="card-label-2">Adicionar aos Favoritos</div>
-                      </li>
-  
-                      <li class="card-action-item">
-                        <button class="card-action-btn" aria-labelledby="card-label-3">
-                          <ion-icon name="eye-outline"></ion-icon>
-                        </button>
-  
-                        <div class="card-action-tooltip" id="card-label-3">Visão</div>
-                      </li>
+                      
   
                     </ul>
                   </figure>
@@ -1045,21 +758,7 @@
                         <div class="card-action-tooltip" id="card-label-1">Adicionar ao Carrinho</div>
                       </li>
   
-                      <li class="card-action-item">
-                        <button class="card-action-btn" aria-labelledby="card-label-2">
-                          <ion-icon name="heart-outline"></ion-icon>
-                        </button>
-  
-                        <div class="card-action-tooltip" id="card-label-2">Adicionar aos Favoritos</div>
-                      </li>
-  
-                      <li class="card-action-item">
-                        <button class="card-action-btn" aria-labelledby="card-label-3">
-                          <ion-icon name="eye-outline"></ion-icon>
-                        </button>
-  
-                        <div class="card-action-tooltip" id="card-label-3">Visão</div>
-                      </li>
+                      
   
                     </ul>
                   </figure>
@@ -1095,23 +794,6 @@
   
                         <div class="card-action-tooltip" id="card-label-1">Adicionar ao Carrinho</div>
                       </li>
-  
-                      <li class="card-action-item">
-                        <button class="card-action-btn" aria-labelledby="card-label-2">
-                          <ion-icon name="heart-outline"></ion-icon>
-                        </button>
-  
-                        <div class="card-action-tooltip" id="card-label-2">Adicionar aos Favoritos</div>
-                      </li>
-  
-                      <li class="card-action-item">
-                        <button class="card-action-btn" aria-labelledby="card-label-3">
-                          <ion-icon name="eye-outline"></ion-icon>
-                        </button>
-  
-                        <div class="card-action-tooltip" id="card-label-3">Visão</div>
-                      </li>
-  
                     </ul>
                   </figure>
   
@@ -1146,23 +828,6 @@
   
                         <div class="card-action-tooltip" id="card-label-1">Adicionar ao Carrinho</div>
                       </li>
-  
-                      <li class="card-action-item">
-                        <button class="card-action-btn" aria-labelledby="card-label-2">
-                          <ion-icon name="heart-outline"></ion-icon>
-                        </button>
-  
-                        <div class="card-action-tooltip" id="card-label-2">Adicionar aos Favoritos</div>
-                      </li>
-  
-                      <li class="card-action-item">
-                        <button class="card-action-btn" aria-labelledby="card-label-3">
-                          <ion-icon name="eye-outline"></ion-icon>
-                        </button>
-  
-                        <div class="card-action-tooltip" id="card-label-3">Visão</div>
-                      </li>
-  
                     </ul>
                   </figure>
   
@@ -1197,23 +862,6 @@
   
                         <div class="card-action-tooltip" id="card-label-1">Adicionar ao Carrinho</div>
                       </li>
-  
-                      <li class="card-action-item">
-                        <button class="card-action-btn" aria-labelledby="card-label-2">
-                          <ion-icon name="heart-outline"></ion-icon>
-                        </button>
-  
-                        <div class="card-action-tooltip" id="card-label-2">Adicionar aos Favoritos</div>
-                      </li>
-  
-                      <li class="card-action-item">
-                        <button class="card-action-btn" aria-labelledby="card-label-3">
-                          <ion-icon name="eye-outline"></ion-icon>
-                        </button>
-  
-                        <div class="card-action-tooltip" id="card-label-3">Visão</div>
-                      </li>
-  
                     </ul>
                   </figure>
   
@@ -1248,23 +896,6 @@
   
                         <div class="card-action-tooltip" id="card-label-1">Adicionar ao Carrinho</div>
                       </li>
-  
-                      <li class="card-action-item">
-                        <button class="card-action-btn" aria-labelledby="card-label-2">
-                          <ion-icon name="heart-outline"></ion-icon>
-                        </button>
-  
-                        <div class="card-action-tooltip" id="card-label-2">Adicionar aos Favoritos</div>
-                      </li>
-  
-                      <li class="card-action-item">
-                        <button class="card-action-btn" aria-labelledby="card-label-3">
-                          <ion-icon name="eye-outline"></ion-icon>
-                        </button>
-  
-                        <div class="card-action-tooltip" id="card-label-3">Visão</div>
-                      </li>
-  
                     </ul>
                   </figure>
   
@@ -1299,22 +930,7 @@
   
                         <div class="card-action-tooltip" id="card-label-1">Adicionar ao Carrinho</div>
                       </li>
-  
-                      <li class="card-action-item">
-                        <button class="card-action-btn" aria-labelledby="card-label-2">
-                          <ion-icon name="heart-outline"></ion-icon>
-                        </button>
-  
-                        <div class="card-action-tooltip" id="card-label-2">Adicionar aos Favoritos</div>
-                      </li>
-  
-                      <li class="card-action-item">
-                        <button class="card-action-btn" aria-labelledby="card-label-3">
-                          <ion-icon name="eye-outline"></ion-icon>
-                        </button>
-  
-                        <div class="card-action-tooltip" id="card-label-3">Visão</div>
-                      </li>
+                    
   
                     </ul>
                   </figure>
@@ -1350,23 +966,6 @@
   
                         <div class="card-action-tooltip" id="card-label-1">Adicionar ao Carrinho</div>
                       </li>
-  
-                      <li class="card-action-item">
-                        <button class="card-action-btn" aria-labelledby="card-label-2">
-                          <ion-icon name="heart-outline"></ion-icon>
-                        </button>
-  
-                        <div class="card-action-tooltip" id="card-label-2">Adicionar aos Favoritos</div>
-                      </li>
-  
-                      <li class="card-action-item">
-                        <button class="card-action-btn" aria-labelledby="card-label-3">
-                          <ion-icon name="eye-outline"></ion-icon>
-                        </button>
-  
-                        <div class="card-action-tooltip" id="card-label-3">Visão</div>
-                      </li>
-  
                     </ul>
                   </figure>
   
@@ -1401,23 +1000,6 @@
   
                         <div class="card-action-tooltip" id="card-label-1">Adicionar ao Carrinho</div>
                       </li>
-  
-                      <li class="card-action-item">
-                        <button class="card-action-btn" aria-labelledby="card-label-2">
-                          <ion-icon name="heart-outline"></ion-icon>
-                        </button>
-  
-                        <div class="card-action-tooltip" id="card-label-2">Adicionar aos Favoritos</div>
-                      </li>
-  
-                      <li class="card-action-item">
-                        <button class="card-action-btn" aria-labelledby="card-label-3">
-                          <ion-icon name="eye-outline"></ion-icon>
-                        </button>
-  
-                        <div class="card-action-tooltip" id="card-label-3">Visão</div>
-                      </li>
-  
                     </ul>
                   </figure>
   
@@ -1452,23 +1034,6 @@
   
                         <div class="card-action-tooltip" id="card-label-1">Adicionar ao Carrinho</div>
                       </li>
-  
-                      <li class="card-action-item">
-                        <button class="card-action-btn" aria-labelledby="card-label-2">
-                          <ion-icon name="heart-outline"></ion-icon>
-                        </button>
-  
-                        <div class="card-action-tooltip" id="card-label-2">Adicionar aos Favoritos</div>
-                      </li>
-  
-                      <li class="card-action-item">
-                        <button class="card-action-btn" aria-labelledby="card-label-3">
-                          <ion-icon name="eye-outline"></ion-icon>
-                        </button>
-  
-                        <div class="card-action-tooltip" id="card-label-3">Visão</div>
-                      </li>
-  
                     </ul>
                   </figure>
   
@@ -1503,23 +1068,6 @@
   
                         <div class="card-action-tooltip" id="card-label-1">Adicionar ao Carrinho</div>
                       </li>
-  
-                      <li class="card-action-item">
-                        <button class="card-action-btn" aria-labelledby="card-label-2">
-                          <ion-icon name="heart-outline"></ion-icon>
-                        </button>
-  
-                        <div class="card-action-tooltip" id="card-label-2">Adicionar aos Favoritos</div>
-                      </li>
-  
-                      <li class="card-action-item">
-                        <button class="card-action-btn" aria-labelledby="card-label-3">
-                          <ion-icon name="eye-outline"></ion-icon>
-                        </button>
-  
-                        <div class="card-action-tooltip" id="card-label-3">Visão</div>
-                      </li>
-  
                     </ul>
                   </figure>
   
@@ -1554,23 +1102,6 @@
   
                         <div class="card-action-tooltip" id="card-label-1">Adicionar ao Carrinho</div>
                       </li>
-  
-                      <li class="card-action-item">
-                        <button class="card-action-btn" aria-labelledby="card-label-2">
-                          <ion-icon name="heart-outline"></ion-icon>
-                        </button>
-  
-                        <div class="card-action-tooltip" id="card-label-2">Adicionar aos Favoritos</div>
-                      </li>
-  
-                      <li class="card-action-item">
-                        <button class="card-action-btn" aria-labelledby="card-label-3">
-                          <ion-icon name="eye-outline"></ion-icon>
-                        </button>
-  
-                        <div class="card-action-tooltip" id="card-label-3">Visão</div>
-                      </li>
-  
                     </ul>
                   </figure>
   
@@ -1596,7 +1127,7 @@
   
                     
   
-                    <ul class="product-item baterias" data-category="baterias">
+                    <ul class="card-action-list">
   
                       <li class="card-action-item">
                         <button class="card-action-btn" aria-labelledby="card-label-1">
@@ -1605,33 +1136,16 @@
   
                         <div class="card-action-tooltip" id="card-label-1">Adicionar ao Carrinho</div>
                       </li>
-  
-                      <li class="card-action-item">
-                        <button class="card-action-btn" aria-labelledby="card-label-2">
-                          <ion-icon name="heart-outline"></ion-icon>
-                        </button>
-  
-                        <div class="card-action-tooltip" id="card-label-2">Adicionar aos Favoritos</div>
-                      </li>
-  
-                      <li class="card-action-item">
-                        <button class="card-action-btn" aria-labelledby="card-label-3">
-                          <ion-icon name="eye-outline"></ion-icon>
-                        </button>
-  
-                        <div class="card-action-tooltip" id="card-label-3">Visão</div>
-                      </li>
-  
                     </ul>
                   </figure>
   
                   <div class="card-content">
   
                     <h3 class="h3 card-title">
-                      <a href="#">Fender Player Stratocaster HSS Maple Fingerboard Guitarra Elétrica Tidepool</a>
+                      <a href="#">Violão Eletroacústico Aço Folk Perfromance Pro FK2 GOAL CEQ Giannini - Natural (Natural Satin) (NS)</a>
                     </h3>
   
-                    <data class="card-price" value="4383,22">R$4383,22</data>
+                    <data class="card-price" value="1800,00">R$1800,00</data>
   
                   </div>
   
@@ -1656,23 +1170,6 @@
   
                         <div class="card-action-tooltip" id="card-label-1">Adicionar ao Carrinho</div>
                       </li>
-  
-                      <li class="card-action-item">
-                        <button class="card-action-btn" aria-labelledby="card-label-2">
-                          <ion-icon name="heart-outline"></ion-icon>
-                        </button>
-  
-                        <div class="card-action-tooltip" id="card-label-2">Adicionar aos Favoritos</div>
-                      </li>
-  
-                      <li class="card-action-item">
-                        <button class="card-action-btn" aria-labelledby="card-label-3">
-                          <ion-icon name="eye-outline"></ion-icon>
-                        </button>
-  
-                        <div class="card-action-tooltip" id="card-label-3">Visão</div>
-                      </li>
-  
                     </ul>
                   </figure>
   
@@ -1707,23 +1204,6 @@
   
                         <div class="card-action-tooltip" id="card-label-1">Adicionar ao Carrinho</div>
                       </li>
-  
-                      <li class="card-action-item">
-                        <button class="card-action-btn" aria-labelledby="card-label-2">
-                          <ion-icon name="heart-outline"></ion-icon>
-                        </button>
-  
-                        <div class="card-action-tooltip" id="card-label-2">Adicionar aos Favoritos</div>
-                      </li>
-  
-                      <li class="card-action-item">
-                        <button class="card-action-btn" aria-labelledby="card-label-3">
-                          <ion-icon name="eye-outline"></ion-icon>
-                        </button>
-  
-                        <div class="card-action-tooltip" id="card-label-3">Visão</div>
-                      </li>
-  
                     </ul>
                   </figure>
   
@@ -1751,30 +1231,16 @@
   
                     <ul class="card-action-list">
   
-                      <li class="card-action-item">
-                        <button class="card-action-btn" aria-labelledby="card-label-1">
-                          <ion-icon name="cart-outline"></ion-icon>
-                        </button>
+                      <ul class="card-action-list">
   
-                        <div class="card-action-tooltip" id="card-label-1">Adicionar ao Carrinho</div>
-                      </li>
-  
-                      <li class="card-action-item">
-                        <button class="card-action-btn" aria-labelledby="card-label-2">
-                          <ion-icon name="heart-outline"></ion-icon>
-                        </button>
-  
-                        <div class="card-action-tooltip" id="card-label-2">Adicionar aos Favoritos</div>
-                      </li>
-  
-                      <li class="card-action-item">
-                        <button class="card-action-btn" aria-labelledby="card-label-3">
-                          <ion-icon name="eye-outline"></ion-icon>
-                        </button>
-  
-                        <div class="card-action-tooltip" id="card-label-3">Visão</div>
-                      </li>
-  
+                        <li class="card-action-item">
+                          <button class="card-action-btn" aria-labelledby="card-label-1">
+                            <ion-icon name="cart-outline"></ion-icon>
+                          </button>
+    
+                          <div class="card-action-tooltip" id="card-label-1">Adicionar ao Carrinho</div>
+                        </li>
+                      </ul>
                     </ul>
                   </figure>
   
@@ -1809,23 +1275,6 @@
   
                         <div class="card-action-tooltip" id="card-label-1">Adicionar ao Carrinho</div>
                       </li>
-  
-                      <li class="card-action-item">
-                        <button class="card-action-btn" aria-labelledby="card-label-2">
-                          <ion-icon name="heart-outline"></ion-icon>
-                        </button>
-  
-                        <div class="card-action-tooltip" id="card-label-2">Adicionar aos Favoritos</div>
-                      </li>
-  
-                      <li class="card-action-item">
-                        <button class="card-action-btn" aria-labelledby="card-label-3">
-                          <ion-icon name="eye-outline"></ion-icon>
-                        </button>
-  
-                        <div class="card-action-tooltip" id="card-label-3">Visão</div>
-                      </li>
-  
                     </ul>
                   </figure>
   
@@ -1860,23 +1309,6 @@
   
                         <div class="card-action-tooltip" id="card-label-1">Adicionar ao Carrinho</div>
                       </li>
-  
-                      <li class="card-action-item">
-                        <button class="card-action-btn" aria-labelledby="card-label-2">
-                          <ion-icon name="heart-outline"></ion-icon>
-                        </button>
-  
-                        <div class="card-action-tooltip" id="card-label-2">Adicionar aos Favoritos</div>
-                      </li>
-  
-                      <li class="card-action-item">
-                        <button class="card-action-btn" aria-labelledby="card-label-3">
-                          <ion-icon name="eye-outline"></ion-icon>
-                        </button>
-  
-                        <div class="card-action-tooltip" id="card-label-3">Visão</div>
-                      </li>
-  
                     </ul>
                   </figure>
   
@@ -1911,23 +1343,6 @@
   
                         <div class="card-action-tooltip" id="card-label-1">Adicionar ao Carrinho</div>
                       </li>
-  
-                      <li class="card-action-item">
-                        <button class="card-action-btn" aria-labelledby="card-label-2">
-                          <ion-icon name="heart-outline"></ion-icon>
-                        </button>
-  
-                        <div class="card-action-tooltip" id="card-label-2">Adicionar aos Favoritos</div>
-                      </li>
-  
-                      <li class="card-action-item">
-                        <button class="card-action-btn" aria-labelledby="card-label-3">
-                          <ion-icon name="eye-outline"></ion-icon>
-                        </button>
-  
-                        <div class="card-action-tooltip" id="card-label-3">Visão</div>
-                      </li>
-  
                     </ul>
                   </figure>
   
@@ -1963,23 +1378,6 @@
   
                         <div class="card-action-tooltip" id="card-label-1">Adicionar ao Carrinho</div>
                       </li>
-  
-                      <li class="card-action-item">
-                        <button class="card-action-btn" aria-labelledby="card-label-2">
-                          <ion-icon name="heart-outline"></ion-icon>
-                        </button>
-  
-                        <div class="card-action-tooltip" id="card-label-2">Adicionar aos Favoritos</div>
-                      </li>
-  
-                      <li class="card-action-item">
-                        <button class="card-action-btn" aria-labelledby="card-label-3">
-                          <ion-icon name="eye-outline"></ion-icon>
-                        </button>
-  
-                        <div class="card-action-tooltip" id="card-label-3">Visão</div>
-                      </li>
-  
                     </ul>
                   </figure>
   
@@ -2013,25 +1411,7 @@
                         </button>
   
                         <div class="card-action-tooltip" id="card-label-1">Adicionar ao Carrinho</div>
-                      </li>
-  
-                      <li class="card-action-item">
-                        <button class="card-action-btn" aria-labelledby="card-label-2">
-                          <ion-icon name="heart-outline"></ion-icon>
-                        </button>
-  
-                        <div class="card-action-tooltip" id="card-label-2">Adicionar aos Favoritos</div>
-                      </li>
-  
-                      <li class="card-action-item">
-                        <button class="card-action-btn" aria-labelledby="card-label-3">
-                          <ion-icon name="eye-outline"></ion-icon>
-                        </button>
-  
-                        <div class="card-action-tooltip" id="card-label-3">Visão</div>
-                      </li>
-  
-                    </ul>
+                      </li></ul>
                   </figure>
   
                   <div class="card-content">
@@ -2065,23 +1445,6 @@
                         </button>
                         <div class="card-action-tooltip" id="card-label-1">Adicionar ao Carrinho</div>
                       </li>
-  
-                      <li class="card-action-item">
-                        <button class="card-action-btn" aria-labelledby="card-label-2">
-                          <ion-icon name="heart-outline"></ion-icon>
-                        </button>
-  
-                        <div class="card-action-tooltip" id="card-label-2">Adicionar aos Favoritos</div>
-                      </li>
-  
-                      <li class="card-action-item">
-                        <button class="card-action-btn" aria-labelledby="card-label-3">
-                          <ion-icon name="eye-outline"></ion-icon>
-                        </button>
-  
-                        <div class="card-action-tooltip" id="card-label-3">Visão</div>
-                      </li>
-  
                     </ul>
                   </figure>
   
@@ -2118,22 +1481,6 @@
                         <div class="card-action-tooltip" id="adicionar-ao-carrinho-1">Adicionar ao Carrinho</div>
                       </li>
   
-                      <li class="card-action-item">
-                        <button class="card-action-btn" aria-labelledby="card-label-2">
-                          <ion-icon name="heart-outline"></ion-icon>
-                        </button>
-  
-                        <div class="card-action-tooltip" id="card-label-2">Adicionar aos Favoritos</div>
-                      </li>
-  
-                      <li class="card-action-item">
-                        <button class="card-action-btn" aria-labelledby="card-label-3">
-                          <ion-icon name="eye-outline"></ion-icon>
-                        </button>
-  
-                        <div class="card-action-tooltip" id="card-label-3">Visão</div>
-                      </li>
-  
                     </ul>
                   </figure>
   
@@ -2152,48 +1499,9 @@
               </li>
             </ul>
 
-           
-
-            
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-  const addToCartButtons = document.querySelectorAll('.add-to-cart-button');
-  const cartItemsList = document.getElementById('cart-items');
-  const cartTotal = document.getElementById('cart-total');
-
-  let cart = [];
-
-  addToCartButtons.forEach(button => {
-    button.addEventListener('click', () => {
-      const product = button.parentElement;
-      const productName = product.querySelector('.card-title').textContent;
-      const productPrice = parseFloat(product.querySelector('.card-price').getAttribute('value'));
-
-      cart.push({ name: productName, price: productPrice });
-      updateCart();
-    });
-  });
-
-  function updateCart() {
-    cartItemsList.innerHTML = '';
-    let total = 0;
-
-    cart.forEach(item => {
-      const li = document.createElement('li');
-      li.textContent = `${item.name} - R$${item.price.toFixed(2)}`;
-      cartItemsList.appendChild(li);
-      total += item.price;
-    });
-
-    cartTotal.textContent = `R$${total.toFixed(2)}`;
-  }
-});
-
-</script>
-
-
-
-
+      <!-- 
+        - PRODUTOS POR CATEGORIA
+      -->
 
           <script>
             // JavaScript para filtrar os produtos por categoria
