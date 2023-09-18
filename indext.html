@@ -10,7 +10,7 @@
   <!-- 
     - foto do icone do arquivo
   -->
-  <link rel="shortcut icon"  href="./146ec5f1b5e9511dda8653033d35ebfe.jpg" type="image/svg+xml">
+  <link rel="shortcut icon" href="./imgs/LOGOOFICIO.png" type="image/svg+xml">
 
   <!-- 
     - custom css link
@@ -29,7 +29,7 @@
   <!-- 
     - preload banner
   -->
-  <link rel="preload" href="./AZUL.jpg" as="image">
+  <link rel="preload" href="./imgs/LOGOOFICIO.png" as="image">
 
 </head>
 
@@ -44,8 +44,8 @@
 
       <div class="overlay" data-overlay></div>
 
-       <a href="#" class="logo">  <!--LOGO -->
-        <img src="./AZUL.jpg" width="160" height="50" alt="Footcap logo">
+      <a href="#" class="logo"> <!--LOGO -->
+        <img src="./imgs/LOGOOFICIO.png" width="160" height="50" alt="Footcap logo">
       </a>
 
       <button class="nav-open-btn" data-nav-open-btn aria-label="Open Menu">
@@ -59,7 +59,7 @@
         </button>
 
         <a href="#" class="logo">
-          <img src="./AZUL.jpg" width="190" height="50" alt="Footcap logo">
+          <img src="./imgs/LOGOOFICIO.png" width="190" height="50" alt="Footcap logo">
         </a>
 
         <ul class="navbar-list">
@@ -67,40 +67,25 @@
           <li class="navbar-item">
             <a href="#" class="navbar-link">Inicio</a>
           </li>
-          
+
           <li class="navbar-item">
             <a href="produtos.html" class="navbar-link" target="_blank">Produtos</a>
           </li>
 
           <li class="navbar-item">
-            <a href="#" class="navbar-link">Comprar</a>
+            <a href="#" class="navbar-link">Carrinho</a>
           </li>
-
-          <li class="navbar-item">
-            <a href="#" class="navbar-link">Blog</a>
-          </li>
-
           <li class="navbar-item">
             <a href="#" class="navbar-link">Contato</a>
           </li>
 
         </ul>
 
-        <ul class="nav-action-list">
-
-          <li>
-            <button class="nav-action-btn">
-              <ion-icon name="search-outline" aria-hidden="true"></ion-icon>
-
-              <span class="nav-action-text">Pesquisar</span>
-            </button>
-          </li>
-
-          <li>
-            <a href="login.html" class="nav-action-btn" id="login-register-button">
-                <ion-icon name="person-outline" aria-hidden="true"></ion-icon>
-                <span class="nav-action-text">Login / Registrar</span>
-            </a>
+        <li>
+          <a href="login.html" class="nav-action-btn" id="login-register-button">
+            <ion-icon name="person-outline" aria-hidden="true"></ion-icon>
+            <span class="nav-action-text">Login / Registrar</span>
+          </a>
         </li>
         </ul>
 
@@ -108,15 +93,16 @@
 
     </div>
   </header>
-  
+
   <main>
     <article>
 
       <!-- 
-        - #HERO
+        - #HEROvscode-file://vscode-app/c:/Users/55859/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/code/electron-sandbox/workbench/workbench.html
       -->
 
-      <section class="section hero" style="background-image: url('https://akamai.sscdn.co/tb/cifra-blog/pt/wp-content/uploads/2022/02/9135ab3-tipos-de-instrumentos-musicais.png')">
+      <section class="section hero"
+        style="background-image: url('https://akamai.sscdn.co/tb/cifra-blog/pt/wp-content/uploads/2022/02/9135ab3-tipos-de-instrumentos-musicais.png')">
         <div class="container">
 
           <h2 style="color: black; font-size: 40px;">
@@ -124,19 +110,21 @@
           </h2>
 
           <p class="hero-text" style="color: rgb(0, 0, 0);  font-size: 17px;">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque tempore explicabo, rerum in, at sapiente quidem cumque aliquid veniam omnis sit numquam, eius odit corrupti fugit quis cupiditate reiciendis molestias!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque tempore explicabo, rerum in, at sapiente
+            quidem cumque aliquid veniam omnis sit numquam, eius odit corrupti fugit quis cupiditate reiciendis
+            molestias!
           </p>
 
           <button class="btn btn-primary" id="btnProdutos">
             <span>Produtos</span>
             <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
-        </button>
-        <script>
-        document.getElementById("btnProdutos").addEventListener("click", function() {
-            // Redirecionar para a página produtos.html
-            window.location.href = "produtos.html";
-        });
-        </script>
+          </button>
+          <script>
+            document.getElementById("btnProdutos").addEventListener("click", function () {
+              // Redirecionar para a página produtos.html
+              window.location.href = "produtos.html";
+            });
+          </script>
 
         </div>
       </section>
@@ -158,51 +146,51 @@
               <div class="collection-card" style="background-image: url('./imgs/explregui.jpg')" id="guitarrasCard">
                 <h3 class="h3 card-title">Guitarras</h3>
                 <a href="#" class="btn btn-secondary" id="guitarrasButton">
-                    <span>Explorar</span>
-                    <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+                  <span>Explorar</span>
+                  <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
                 </a>
-            </div>
-            
-            <script>
-            document.getElementById("guitarrasButton").addEventListener("click", function() {
-                // Redirecionar para a página guitarras.html
-                window.location.href = "guitarras.html";
-            });
-            </script>
+              </div>
+
+              <script>
+                document.getElementById("guitarrasButton").addEventListener("click", function () {
+                  // Redirecionar para a página guitarras.html
+                  window.location.href = "guitarras.html";
+                });
+              </script>
 
             <li>
               <div class="collection-card" style="background-image: url('./imgs/explorebx.jpg')" id="baixosCard">
-                  <h3 class="h3 card-title">Baixos</h3>
-                  <a href="#" class="btn btn-secondary" id="baixosButton">
-                      <span>Explorar</span>
-                      <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
-                  </a>
+                <h3 class="h3 card-title">Baixos</h3>
+                <a href="#" class="btn btn-secondary" id="baixosButton">
+                  <span>Explorar</span>
+                  <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+                </a>
               </div>
-          </li>
-          
-          <script>
-          document.getElementById("baixosButton").addEventListener("click", function() {
-              // Redirecionar para a página baixos.html
-              window.location.href = "baixos.html";
-          });
-          </script>
+            </li>
 
-          <li>
-            <div class="collection-card" style="background-image: url('./imgs/explorebt.jpg')" id="bateriasCard">
+            <script>
+              document.getElementById("baixosButton").addEventListener("click", function () {
+                // Redirecionar para a página baixos.html
+                window.location.href = "baixos.html";
+              });
+            </script>
+
+            <li>
+              <div class="collection-card" style="background-image: url('./imgs/explorebt.jpg')" id="bateriasCard">
                 <h3 class="h3 card-title">Baterias</h3>
                 <a href="#" class="btn btn-secondary" id="bateriasButton">
-                    <span>Explorar</span>
-                    <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+                  <span>Explorar</span>
+                  <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
                 </a>
-            </div>
-        </li>
-        
-        <script>
-        document.getElementById("bateriasButton").addEventListener("click", function() {
-            // Redirecionar para a página baterias.html
-            window.location.href = "baterias.html";
-        });
-        </script>
+              </div>
+            </li>
+
+            <script>
+              document.getElementById("bateriasButton").addEventListener("click", function () {
+                // Redirecionar para a página baterias.html
+                window.location.href = "baterias.html";
+              });
+            </script>
 
           </ul>
 
@@ -242,15 +230,15 @@
               <a href="#" class="filter-btn" data-category="caixas">Caixas</a>
             </li>
           </ul>
-          
 
-              <ul class="product-list">
-                <li class="product-item teclados">
+
+          <ul class="product-list">
+            <li class="product-item teclados">
               <div class="product-card" tabindex="0">
 
                 <figure class="card-banner">
-                  <img src="./imgs/textra2.jpeg" width="312" height="350" loading="lazy"
-                    alt="Instrumentos" class="image-contain">
+                  <img src="./imgs/textra2.jpeg" width="312" height="350" loading="lazy" alt="Instrumentos"
+                    class="image-contain">
 
                   <div class="card-badge">Novo</div>
 
@@ -281,248 +269,250 @@
             </li>
 
             <li class="product-item pedais">
-                <div class="product-card" tabindex="0">
-  
-                  <figure class="card-banner">
-                    <img src="./imgs/pedalextra1.jpeg" width="312" height="350" loading="lazy"
-                      alt="Instrumentos" class="image-contain">
-  
-                    <div class="card-badge">Novo</div>
-  
-                    <ul class="card-action-list">
-  
-                      <li class="card-action-item">
-                        <button class="card-action-btn" aria-labelledby="card-label-1">
-                          <ion-icon name="cart-outline"></ion-icon>
-                        </button>
-  
-                        <div class="card-action-tooltip" id="card-label-1">Adicionar ao Carrinho</div>
-                      </li>
-  
-                    </ul>
-                  </figure>
-  
-                  <div class="card-content">
-  
-                    <h3 class="h3 card-title">
-                      <a href="#">PEDAL IBANEZ TUBE SCREAM MODELO TS9 </a>
-                    </h3>
-  
-                    <data class="card-price" value="1.460,00">R$1.460,00</data>
-  
-                  </div>
-  
-                </div>
-              </li>
+              <div class="product-card" tabindex="0">
 
-              <li class="product-item caixas">
-                <div class="product-card" tabindex="0">
-  
-                  <figure class="card-banner">
-                    <img src="./imgs/caixaextra2.jpeg" width="312" height="350" loading="lazy"
-                      alt="Instrumentos" class="image-contain">
-  
-                    
-  
-                    <ul class="card-action-list">
-  
-                      <li class="card-action-item">
-                        <button class="card-action-btn" aria-labelledby="card-label-1">
-                          <ion-icon name="cart-outline"></ion-icon>
-                        </button>
-  
-                        <div class="card-action-tooltip" id="card-label-1">Adicionar ao Carrinho</div>
-                      </li>
-  
-                    </ul>
-                  </figure>
-  
-                  <div class="card-content">
-  
-                    <h3 class="h3 card-title">
-                      <a href="#">Amplificador para Baixo 350W VX 3500 HARTKE</a>
-                    </h3>
-  
-                    <data class="card-price" value="8000,00">R$8000,00</data>
-  
-                  </div>
-  
-                </div>
-              </li>
+                <figure class="card-banner">
+                  <img src="./imgs/pedalextra1.jpeg" width="312" height="350" loading="lazy" alt="Instrumentos"
+                    class="image-contain">
 
-              <li class="product-item teclados">
-                <div class="product-card" tabindex="0">
-  
-                  <figure class="card-banner">
-                    <img src="./imgs/textra1.jpeg" width="312" height="350" loading="lazy"
-                      alt="Instrumentos" class="image-contain">
-  
-                    <div class="card-badge">Novo</div>
-  
-                    <ul class="card-action-list">
-  
-                      <li class="card-action-item">
-                        <button class="card-action-btn" aria-labelledby="card-label-1">
-                          <ion-icon name="cart-outline"></ion-icon>
-                        </button>
-  
-                        <div class="card-action-tooltip" id="card-label-1">Adicionar ao Carrinho</div>
-                      </li>
-  
-                    </ul>
-                  </figure>
-  
-                  <div class="card-content">
-  
-                    <h3 class="h3 card-title">
-                      <a href="#">TECLADO SITENTIZADOR YAMAHA YC 73 TECLAS</a>
-                    </h3>
-  
-                    <data class="card-price" value="12.000,00">R$12.000,00</data>
-  
-                  </div>
-  
-                </div>
-              </li>
+                  <div class="card-badge">Novo</div>
 
-              <li class="product-item acessorios">
-                <div class="product-card" tabindex="0">
-  
-                  <figure class="card-banner">
-                    <img src="./imgs/bag.webp" width="312" height="350" loading="lazy"
-                      alt="Instrumentos" class="image-contain">
-  
-                    <div class="card-badge">Novo</div>
-  
-                    <ul class="card-action-list">
-  
-                      <li class="card-action-item">
-                        <button class="card-action-btn" aria-labelledby="card-label-1">
-                          <ion-icon name="cart-outline"></ion-icon>
-                        </button>
-  
-                        <div class="card-action-tooltip" id="card-label-1">Adicionar ao Carrinho</div>
-                      </li>
-  
-                    </ul>
-                  </figure>
-  
-                  <div class="card-content">
-  
-                    <h3 class="h3 card-title">
-                      <a href="#">Bag de Baquetas Gavazzi Luxo Azul Amarelo Extra Grande com alça de mochila, compatível com laptop</a>
-                    </h3>
-  
-                    <data class="card-price" value="395,00">R$395,00</data>
-  
-                  </div>
-  
-                </div>
-              </li>
+                  <ul class="card-action-list">
 
-              <li class="product-item cordas">
-                <div class="product-card" tabindex="0">
-  
-                  <figure class="card-banner">
-                    <img src="./imgs/corda1e.jpeg" width="312" height="350" loading="lazy"
-                      alt="Instrumentos" class="image-contain">
-  
-                    <div class="card-badge">Novo</div>
-  
-                    <ul class="card-action-list">
-  
-                      <li class="card-action-item">
-                        <button class="card-action-btn" aria-labelledby="card-label-1">
-                          <ion-icon name="cart-outline"></ion-icon>
-                        </button>
-  
-                        <div class="card-action-tooltip" id="card-label-1">Adicionar ao Carrinho</div>
-                      </li>
-  
-                    </ul>
-                  </figure>
-  
-                  <div class="card-content">
-  
-                    <h3 class="h3 card-title">
-                      <a href="#">Encordamento Guitarra Ernie Ball Slinky</a>
-                    </h3>
-  
-                    <data class="card-price" value="150,00">R$150,00</data>
-  
-                  </div>
-  
-                </div>
-              </li>
+                    <li class="card-action-item">
+                      <button class="card-action-btn" aria-labelledby="card-label-1">
+                        <ion-icon name="cart-outline"></ion-icon>
+                      </button>
 
-              <li class="product-item cordas">
-                <div class="product-card" tabindex="0">
-  
-                  <figure class="card-banner">
-                    <img src="./imgs/corda2e.jpeg" width="312" height="350" loading="lazy"
-                      alt="Instrumentos" class="image-contain">
-  
-                    
-  
-                    <ul class="card-action-list">
-  
-                      <li class="card-action-item">
-                        <button class="card-action-btn" aria-labelledby="card-label-1">
-                          <ion-icon name="cart-outline"></ion-icon>
-                        </button>
-  
-                        <div class="card-action-tooltip" id="card-label-1">Adicionar ao Carrinho</div>
-                      </li>
-                    </ul>
-                  </figure>
-  
-                  <div class="card-content">
-  
-                    <h3 class="h3 card-title">
-                      <a href="#">Encordamento Pig Hog 6 Metros Plug em L</a>
-                    </h3>
-  
-                    <data class="card-price" value="200,00">R$200,00</data>
-  
-                  </div>
-  
-                </div>
-              </li>
+                      <div class="card-action-tooltip" id="card-label-1">Adicionar ao Carrinho</div>
+                    </li>
 
-              <li class="product-item acessorios">
-                <div class="product-card" tabindex="0">
-  
-                  <figure class="card-banner">
-                    <img src="./imgs/baquetas.webp" width="312" height="350" loading="lazy"
-                      alt="Instrumentos" class="image-contain">
-  
-                    <div class="card-badge">Novo</div>
-  
-                    <ul class="card-action-list">
-  
-                      <li class="card-action-item">
-                        <button class="card-action-btn" aria-labelledby="card-label-1">
-                          <ion-icon name="cart-outline"></ion-icon>
-                        </button>
-  
-                        <div class="card-action-tooltip" id="card-label-1">Adicionar ao Carrinho</div>
-                      </li>
-  
-                    </ul>
-                  </figure>
-  
-                  <div class="card-content">
-  
-                    <h3 class="h3 card-title">
-                      <a href="#">Baqueta Ahead Drumsticks Work Out Stick WOS para Estudo Mais Pesada que 2B e Base de Alumínio</a>
-                    </h3>
-  
-                    <data class="card-price" value="581,00">R$581,00</data>
-  
-                  </div>
-  
+                  </ul>
+                </figure>
+
+                <div class="card-content">
+
+                  <h3 class="h3 card-title">
+                    <a href="#">PEDAL IBANEZ TUBE SCREAM MODELO TS9 </a>
+                  </h3>
+
+                  <data class="card-price" value="1.460,00">R$1.460,00</data>
+
                 </div>
-              </li>
+
+              </div>
+            </li>
+
+            <li class="product-item caixas">
+              <div class="product-card" tabindex="0">
+
+                <figure class="card-banner">
+                  <img src="./imgs/caixaextra2.jpeg" width="312" height="350" loading="lazy" alt="Instrumentos"
+                    class="image-contain">
+
+
+
+                  <ul class="card-action-list">
+
+                    <li class="card-action-item">
+                      <button class="card-action-btn" aria-labelledby="card-label-1">
+                        <ion-icon name="cart-outline"></ion-icon>
+                      </button>
+
+                      <div class="card-action-tooltip" id="card-label-1">Adicionar ao Carrinho</div>
+                    </li>
+
+                  </ul>
+                </figure>
+
+                <div class="card-content">
+
+                  <h3 class="h3 card-title">
+                    <a href="#">Amplificador para Baixo 350W VX 3500 HARTKE</a>
+                  </h3>
+
+                  <data class="card-price" value="8000,00">R$8000,00</data>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li class="product-item teclados">
+              <div class="product-card" tabindex="0">
+
+                <figure class="card-banner">
+                  <img src="./imgs/textra1.jpeg" width="312" height="350" loading="lazy" alt="Instrumentos"
+                    class="image-contain">
+
+                  <div class="card-badge">Novo</div>
+
+                  <ul class="card-action-list">
+
+                    <li class="card-action-item">
+                      <button class="card-action-btn" aria-labelledby="card-label-1">
+                        <ion-icon name="cart-outline"></ion-icon>
+                      </button>
+
+                      <div class="card-action-tooltip" id="card-label-1">Adicionar ao Carrinho</div>
+                    </li>
+
+                  </ul>
+                </figure>
+
+                <div class="card-content">
+
+                  <h3 class="h3 card-title">
+                    <a href="#">TECLADO SITENTIZADOR YAMAHA YC 73 TECLAS</a>
+                  </h3>
+
+                  <data class="card-price" value="12.000,00">R$12.000,00</data>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li class="product-item acessorios">
+              <div class="product-card" tabindex="0">
+
+                <figure class="card-banner">
+                  <img src="./imgs/bag.webp" width="312" height="350" loading="lazy" alt="Instrumentos"
+                    class="image-contain">
+
+                  <div class="card-badge">Novo</div>
+
+                  <ul class="card-action-list">
+
+                    <li class="card-action-item">
+                      <button class="card-action-btn" aria-labelledby="card-label-1">
+                        <ion-icon name="cart-outline"></ion-icon>
+                      </button>
+
+                      <div class="card-action-tooltip" id="card-label-1">Adicionar ao Carrinho</div>
+                    </li>
+
+                  </ul>
+                </figure>
+
+                <div class="card-content">
+
+                  <h3 class="h3 card-title">
+                    <a href="#">Bag de Baquetas Gavazzi Luxo Azul Amarelo Extra Grande com alça de mochila, compatível
+                      com laptop</a>
+                  </h3>
+
+                  <data class="card-price" value="395,00">R$395,00</data>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li class="product-item cordas">
+              <div class="product-card" tabindex="0">
+
+                <figure class="card-banner">
+                  <img src="./imgs/corda1e.jpeg" width="312" height="350" loading="lazy" alt="Instrumentos"
+                    class="image-contain">
+
+                  <div class="card-badge">Novo</div>
+
+                  <ul class="card-action-list">
+
+                    <li class="card-action-item">
+                      <button class="card-action-btn" aria-labelledby="card-label-1">
+                        <ion-icon name="cart-outline"></ion-icon>
+                      </button>
+
+                      <div class="card-action-tooltip" id="card-label-1">Adicionar ao Carrinho</div>
+                    </li>
+
+                  </ul>
+                </figure>
+
+                <div class="card-content">
+
+                  <h3 class="h3 card-title">
+                    <a href="#">Encordamento Guitarra Ernie Ball Slinky</a>
+                  </h3>
+
+                  <data class="card-price" value="150,00">R$150,00</data>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li class="product-item cordas">
+              <div class="product-card" tabindex="0">
+
+                <figure class="card-banner">
+                  <img src="./imgs/corda2e.jpeg" width="312" height="350" loading="lazy" alt="Instrumentos"
+                    class="image-contain">
+
+
+
+                  <ul class="card-action-list">
+
+                    <li class="card-action-item">
+                      <button class="card-action-btn" aria-labelledby="card-label-1">
+                        <ion-icon name="cart-outline"></ion-icon>
+                      </button>
+
+                      <div class="card-action-tooltip" id="card-label-1">Adicionar ao Carrinho</div>
+                    </li>
+                  </ul>
+                </figure>
+
+                <div class="card-content">
+
+                  <h3 class="h3 card-title">
+                    <a href="#">Encordamento Pig Hog 6 Metros Plug em L</a>
+                  </h3>
+
+                  <data class="card-price" value="200,00">R$200,00</data>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li class="product-item acessorios">
+              <div class="product-card" tabindex="0">
+
+                <figure class="card-banner">
+                  <img src="./imgs/baquetas.webp" width="312" height="350" loading="lazy" alt="Instrumentos"
+                    class="image-contain">
+
+                  <div class="card-badge">Novo</div>
+
+                  <ul class="card-action-list">
+
+                    <li class="card-action-item">
+                      <button class="card-action-btn" aria-labelledby="card-label-1">
+                        <ion-icon name="cart-outline"></ion-icon>
+                      </button>
+
+                      <div class="card-action-tooltip" id="card-label-1">Adicionar ao Carrinho</div>
+                    </li>
+
+                  </ul>
+                </figure>
+
+                <div class="card-content">
+
+                  <h3 class="h3 card-title">
+                    <a href="#">Baqueta Ahead Drumsticks Work Out Stick WOS para Estudo Mais Pesada que 2B e Base de
+                      Alumínio</a>
+                  </h3>
+
+                  <data class="card-price" value="581,00">R$581,00</data>
+
+                </div>
+
+              </div>
+            </li>
 
           </ul>
 
@@ -530,7 +520,7 @@
       </section>
 
 
-  
+
 
 
 
@@ -566,8 +556,8 @@
                 <div class="product-card" tabindex="0">
 
                   <figure class="card-banner">
-                    <img src="./imgs/vintage1.jpg" width="312" height="350" loading="lazy"
-                      alt="Running Sneaker Shoes" class="image-contain">
+                    <img src="./imgs/vintage1.jpg" width="312" height="350" loading="lazy" alt="Running Sneaker Shoes"
+                      class="image-contain">
 
                     <div class="card-badge">Novo</div>
 
@@ -601,8 +591,8 @@
                 <div class="product-card" tabindex="0">
 
                   <figure class="card-banner">
-                    <img src="./imgs/vintage2.jpg" width="312" height="350" loading="lazy"
-                      alt="Leather Mens Slipper" class="image-contain">
+                    <img src="./imgs/vintage2.jpg" width="312" height="350" loading="lazy" alt="Leather Mens Slipper"
+                      class="image-contain">
 
                     <ul class="card-action-list">
 
@@ -619,7 +609,7 @@
 
                   <div class="card-content">
 
-                   
+
                     <h3 class="h3 card-title">
                       <a href="#">Fender Jaguar Modelo Americano Vintage</a>
                     </h3>
@@ -635,8 +625,8 @@
                 <div class="product-card" tabindex="0">
 
                   <figure class="card-banner">
-                    <img src="./imgs/vintage4.jpeg" width="312" height="350" loading="lazy"
-                      alt="Leather Mens Slipper" class="image-contain">
+                    <img src="./imgs/vintage4.jpeg" width="312" height="350" loading="lazy" alt="Leather Mens Slipper"
+                      class="image-contain">
 
                     <ul class="card-action-list">
 
@@ -652,9 +642,9 @@
 
                   <div class="card-content">
 
-                   
+
                     <h3 class="h3 card-title">
-                      <a href="#">Guitarra Ibanez modelo PIA3761 signature de  Steve Vai</a>
+                      <a href="#">Guitarra Ibanez modelo PIA3761 signature de Steve Vai</a>
                     </h3>
 
                     <data class="card-price" value="25.000,00">R$25.000,00</data>
@@ -668,8 +658,8 @@
                 <div class="product-card" tabindex="0">
 
                   <figure class="card-banner">
-                    <img src="./imgs/vintage3.jpg" width="312" height="350" loading="lazy"
-                      alt="Leather Mens Slipper" class="image-contain">
+                    <img src="./imgs/vintage3.jpg" width="312" height="350" loading="lazy" alt="Leather Mens Slipper"
+                      class="image-contain">
 
                     <ul class="card-action-list">
 
@@ -685,7 +675,7 @@
 
                   <div class="card-content">
 
-                   
+
                     <h3 class="h3 card-title">
                       <a href="#">Guitarra Gibson modelo Les Pall Studio anos 80</a>
                     </h3>
@@ -901,7 +891,7 @@
         <div class="footer-brand">
 
           <a href="#" class="logo">
-            <img src="./AZUL.jpg" width="160" height="50" alt="Footcap logo">
+            <img src="./imgs/LOGOOFICIO.png" width="160" height="50" alt="Footcap logo">
           </a>
 
           <ul class="social-list">
@@ -977,7 +967,7 @@
             </li>
 
             <li>
-              <a href="#" class="footer-link">
+              <a href="login.html" class="footer-link">
                 <ion-icon name="chevron-forward-outline"></ion-icon>
 
                 <span class="footer-link-text">Minha Conta</span>
@@ -991,16 +981,7 @@
                 <span class="footer-link-text">Ver Carrinho</span>
               </a>
             </li>
-
-            <li>
-              <a href="#" class="footer-link">
-                <ion-icon name="chevron-forward-outline"></ion-icon>
-
-                <span class="footer-link-text">Favoritos</span>
-              </a>
-            </li>
-
-
+          
           </ul>
 
           <div class="footer-list">
@@ -1050,15 +1031,10 @@
             <p class="footer-list-title">Boletim de Notícias</p>
 
             <p class="newsletter-text">
-                Transforme com autoridade as potencialidades 24 horas por dia, 7 dias por semana, com parcerias livres de erros.
+              Transforme com autoridade as potencialidades 24 horas por dia, 7 dias por semana, com parcerias livres de
+              erros.
             </p>
-
-            <form action="" class="newsletter-form">
-              <input type="email" name="email" required placeholder="Endereço Email" class="newsletter-input">
-
-              <button type="submit" class="btn btn-primary">Enviar</button>
-            </form>
-
+          
           </div>
 
         </div>
@@ -1070,8 +1046,8 @@
       <div class="container">
 
         <p class="copyright">
-          &copy; 2023 <a href="#" class="copyright-link">Vicky</a>. All Rights Reserved
-        </p>ewithsadee
+          &copy; 2023 <a href="#" class="copyright-link">V.V.G</a>. Todos os direitos reservados
+        </p>
 
       </div>
     </div>
@@ -1079,25 +1055,7 @@
   </footer>
 
 
-
-
-
-  <!-- 
-    - #GO TO TOP
-  -->
-
-  <a href="#top" class="go-top-btn" data-go-top>
-    <ion-icon name="arrow-up-outline"></ion-icon>
-  </a>
-
-
-
-
-
-  <!-- 
-    - custom js link
-  -->
-  <script src="./assets/js/script.js"></script>
+  <script src="script.js"></script>
 
   <!-- 
     - ionicon link
@@ -1110,18 +1068,18 @@
     document.addEventListener('DOMContentLoaded', function () {
       const filterButtons = document.querySelectorAll('.filter-btn');
       const productItems = document.querySelectorAll('.product-item');
-    
+
       filterButtons.forEach(function (button) {
         button.addEventListener('click', function (e) {
           e.preventDefault();
           const selectedCategory = this.getAttribute('data-category');
-    
+
           // Atualize a classe "active" nos botões de filtro
           filterButtons.forEach(function (btn) {
             btn.classList.remove('active');
           });
           this.classList.add('active');
-    
+
           // Exiba ou oculte produtos com base na categoria selecionada
           productItems.forEach(function (item) {
             const itemCategory = item.classList[1]; // A segunda classe é a categoria
@@ -1134,8 +1092,8 @@
         });
       });
     });
-    </script>
-    
+  </script>
+
 
 </body>
 
