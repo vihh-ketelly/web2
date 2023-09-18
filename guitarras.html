@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrinho de Compras</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Carrinho de Compras</h1>
+    </header>
+    <main>
+        <div class="cart-item">
+            <img src="./imgs/baixo1.jpg" alt="Produto 1">
+            <div class="item-details">
+                <h2>Produto 1</h2>
+                <p>Preço: R$ 50,00</p>
+                <p>Quantidade: 1</p>
+            </div>
+        </div>
+        <div class="cart-item">
+            <img src="./imgs/baixo2.jpg" alt="Produto 2">
+            <div class="item-details">
+                <h2>Produto 2</h2>
+                <p>Preço: R$ 40,00</p>
+                <p>Quantidade: 2</p>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="total">
+            <p>Total: R$ 130,00</p>
+        </div>
+        <button class="checkout-button">Finalizar Compra</button>
+    </footer>
+
+    <style>
+    
+    body {
+        
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        margin: 0;
+        padding: 0;
+    }
+    
+    header {
+        background-color: #6a5acd;
+        color: #fff;
+        text-align: center;
+        padding: 20px;
+    }
+    
+    main {
+        padding: 20px;
+    }
+    
+    .cart-item {
+        display: flex;
+        border: 1px solid #ccc;
+        background-color: #fff;
+        margin-bottom: 10px;
+        padding: 10px;
+    }
+    
+    .cart-item img {
+        width: 100px;
+        height: 100px;
+        margin-right: 10px;
+    }
+    
+    .item-details {
+        flex-grow: 1;
+    }
+    
+    footer {
+        background-color: #6a5acd;
+        color: #fff;
+        text-align: right;
+        padding: 10px;
+    }
+    
+    .total {
+        font-weight: bold;
+        font-size: 18px;
+        margin-right: 10px;
+    }
+    
+    .checkout-button {
+        background-color: #8a2be2;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+    
+    .checkout-button:hover {
+        background-color: #5f1a8e;
+    }
+    </style>
+</body>
+</html>
