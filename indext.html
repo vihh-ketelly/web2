@@ -7,6 +7,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cifra Clube</title>
 
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+
+
   <!-- 
     - foto do icone do arquivo
   -->
@@ -54,10 +60,6 @@
 
       <nav class="navbar" data-navbar>
 
-        <button class="nav-close-btn" data-nav-close-btn aria-label="Close Menu">
-          <ion-icon name="close-outline"></ion-icon>
-        </button>
-
         <a href="#" class="logo">
           <img src="./imgs/LOGOOFICIO.png" width="190" height="50" alt="Footcap logo">
         </a>
@@ -67,64 +69,107 @@
           <li class="navbar-item">
             <a href="#" class="navbar-link">Inicio</a>
           </li>
-
+          
           <li class="navbar-item">
-            <a href="produtos.html" class="navbar-link" target="_blank">Produtos</a>
+            <a href="#contato" class="navbar-link">Contato</a>
           </li>
-
-          <li class="navbar-item">
-            <a href="#" class="navbar-link">Carrinho</a>
-          </li>
-          <li class="navbar-item">
-            <a href="#" class="navbar-link">Contato</a>
-          </li>
-
         </ul>
 
-        <li>
-          <a href="login.html" class="nav-action-btn" id="login-register-button">
-            <ion-icon name="person-outline" aria-hidden="true"></ion-icon>
-            <span class="nav-action-text">Login / Registrar</span>
-          </a>
-        </li>
-        </ul>
+        <div class="search-box">
+          <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Buscar produtos">
+            <button id="searchButton" aria-label="Pesquisar">
+              <ion-icon name="search-outline"></ion-icon>
+            </button>
+          </div>
+        </div>
+        <style>
+          /* Estilos para a caixa de pesquisa e o ícone de lupa */
+.search-container {
+  display: flex;
+  align-items: center;
+  border: 2px solid #9c27b0; /* Cor lilás do contorno */
+  border-radius: 4px; /* Cantos arredondados */
+  padding: 6px;
+  margin-right: 10px; /* Espaço entre a caixa de pesquisa e outros elementos */
+}
+
+#searchInput {
+  border: none;
+  outline: none;
+  width: 100%;
+  padding: 6px;
+}
+
+#searchButton {
+  background-color: #9c27b0; /* Cor lilás de fundo */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 6px 12px;
+}
+
+#searchButton:hover {
+  background-color: #7b1fa2; /* Cor lilás mais escura no hover */
+}
+</style>
+       <!-- ... Seu código HTML anterior ... -->
+
+<ul class="navbar-list">
+  <li>
+    <a href="login.html" class="nav-action-btn" id="login-register-button">
+      <ion-icon name="person-outline" aria-hidden="true"></ion-icon>
+      <span class="nav-action-text">Login / Registrar</span>
+    </a>
+  </li>
+  <li>
+    <button class="nav-action-btn" id="carrinho-button">
+      <ion-icon name="cart-outline" aria-hidden="true"></ion-icon>
+      <span class="nav-action-text">Carrinho</span>
+    </button>
+  </li>
+  <li>
+    <button class="nav-action-btn" id="sair-button">
+      <ion-icon name="log-out-outline" aria-hidden="true"></ion-icon>
+      <span class="nav-action-text">Sair</span>
+    </button>
+  </li>
+</ul>
 
       </nav>
-
     </div>
   </header>
 
   <main>
     <article>
-
-      <!-- 
-        - #HEROvscode-file://vscode-app/c:/Users/55859/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/code/electron-sandbox/workbench/workbench.html
-      -->
-
       <section class="section hero"
         style="background-image: url('https://akamai.sscdn.co/tb/cifra-blog/pt/wp-content/uploads/2022/02/9135ab3-tipos-de-instrumentos-musicais.png')">
         <div class="container">
 
           <h2 style="color: black; font-size: 40px;">
-            Sejam Bem Vindos <strong>Nova Coleção</strong>
+            Sejam Bem Vindos 
           </h2>
 
-          <p class="hero-text" style="color: rgb(0, 0, 0);  font-size: 17px;">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque tempore explicabo, rerum in, at sapiente
-            quidem cumque aliquid veniam omnis sit numquam, eius odit corrupti fugit quis cupiditate reiciendis
-            molestias!
+          <p class="hero-text" style="color: rgb(0, 0, 0);  font-size: 20px;">
+            Explore nossa seleção de instrumentos de alta qualidade para sua jornada musical. Seja iniciante ou experiente, estamos aqui para ajudar. A música nos une, e estamos comprometidos em tornar sua experiência especial. Obrigado por escolher nossa loja. 
           </p>
 
           <button class="btn btn-primary" id="btnProdutos">
             <span>Produtos</span>
             <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
           </button>
+          
           <script>
             document.getElementById("btnProdutos").addEventListener("click", function () {
-              // Redirecionar para a página produtos.html
-              window.location.href = "produtos.html";
+              // Obter a posição da seção de Produtos Mais Vendidos
+              const produtosMaisVendidosSection = document.getElementById("produtosMaisVendidos");
+              
+              // Rolar suavemente até a seção
+              produtosMaisVendidosSection.scrollIntoView({ behavior: "smooth" });
             });
           </script>
+          
 
         </div>
       </section>
@@ -205,33 +250,11 @@
         - #PRODUCT
       -->
 
-      <section class="section product">
+      <section class="section product" id="produtosMaisVendidos">
         <div class="container">
 
-          <h2 class="h2 section-title">Produtos Mais Vendidos</h2>
-
-          <ul class="filter-list">
-            <li>
-              <a href="#" class="filter-btn active" data-category="all">Tudo</a>
-            </li>
-            <li>
-              <a href="#" class="filter-btn" data-category="teclados">Teclados</a>
-            </li>
-            <li>
-              <a href="#" class="filter-btn" data-category="cordas">Cordas</a>
-            </li>
-            <li>
-              <a href="#" class="filter-btn" data-category="acessorios">Acessórios</a>
-            </li>
-            <li>
-              <a href="#" class="filter-btn" data-category="pedais">Cabos</a>
-            </li>
-            <li>
-              <a href="#" class="filter-btn" data-category="caixas">Caixas</a>
-            </li>
-          </ul>
-
-
+          <h2 class="h3 section-title" >Produtos Mais Vendidos</h2>
+          
           <ul class="product-list">
             <li class="product-item teclados">
               <div class="product-card" tabindex="0">
@@ -260,8 +283,16 @@
                   <h3 class="h3 card-title">
                     <a href="#">Teclado</a>
                   </h3>
-
-                  <data class="card-price" value="00,00">R$00,00</data>
+                  <div class="product-quantity">
+                    <label for="quantity" style="font-size: 18px;color: #7136d1; margin-bottom: 5px">Quantidade:</label>
+                    <input type="number" id="quantity" name="quantity" value="1" min="1" style="display: center; flex-direction: column;align-items: center;font-size: 18px; 
+                    text-align: center;
+                    width: 50px;
+                    border: 1px solid #ccc;
+                    border-radius: 5px;
+                    padding: 5px;">
+                  </div>
+                  <data class="card-price" value="00,00">R$2.200,00</data>
 
                 </div>
 
@@ -295,6 +326,15 @@
                   <h3 class="h3 card-title">
                     <a href="#">PEDAL IBANEZ TUBE SCREAM MODELO TS9 </a>
                   </h3>
+                  <div class="product-quantity">
+                    <label for="quantity" style="font-size: 18px;color: #7136d1; margin-bottom: 5px">Quantidade:</label>
+                    <input type="number" id="quantity" name="quantity" value="1" min="1" style="display: center; flex-direction: column;align-items: center;font-size: 18px; 
+                    text-align: center;
+                    width: 50px;
+                    border: 1px solid #ccc;
+                    border-radius: 5px;
+                    padding: 5px;">
+                  </div>
 
                   <data class="card-price" value="1.460,00">R$1.460,00</data>
 
@@ -330,6 +370,15 @@
                   <h3 class="h3 card-title">
                     <a href="#">Amplificador para Baixo 350W VX 3500 HARTKE</a>
                   </h3>
+                  <div class="product-quantity">
+                    <label for="quantity" style="font-size: 18px;color: #7136d1; margin-bottom: 5px">Quantidade:</label>
+                    <input type="number" id="quantity" name="quantity" value="1" min="1" style="display: center; flex-direction: column;align-items: center;font-size: 18px; 
+                    text-align: center;
+                    width: 50px;
+                    border: 1px solid #ccc;
+                    border-radius: 5px;
+                    padding: 5px;">
+                  </div>
 
                   <data class="card-price" value="8000,00">R$8000,00</data>
 
@@ -365,6 +414,15 @@
                   <h3 class="h3 card-title">
                     <a href="#">TECLADO SITENTIZADOR YAMAHA YC 73 TECLAS</a>
                   </h3>
+                   <div class="product-quantity">
+            <label for="quantity" style="font-size: 18px;color: #7136d1; margin-bottom: 5px">Quantidade:</label>
+            <input type="number" id="quantity" name="quantity" value="1" min="1" style="display: center; flex-direction: column;align-items: center;font-size: 18px; 
+            text-align: center;
+            width: 50px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 5px;">
+          </div>
 
                   <data class="card-price" value="12.000,00">R$12.000,00</data>
 
@@ -401,6 +459,15 @@
                     <a href="#">Bag de Baquetas Gavazzi Luxo Azul Amarelo Extra Grande com alça de mochila, compatível
                       com laptop</a>
                   </h3>
+                  <div class="product-quantity">
+                    <label for="quantity" style="font-size: 18px;color: #7136d1; margin-bottom: 5px">Quantidade:</label>
+                    <input type="number" id="quantity" name="quantity" value="1" min="1" style="display: center; flex-direction: column;align-items: center;font-size: 18px; 
+                    text-align: center;
+                    width: 50px;
+                    border: 1px solid #ccc;
+                    border-radius: 5px;
+                    padding: 5px;">
+                  </div>
 
                   <data class="card-price" value="395,00">R$395,00</data>
 
@@ -436,6 +503,15 @@
                   <h3 class="h3 card-title">
                     <a href="#">Encordamento Guitarra Ernie Ball Slinky</a>
                   </h3>
+                  <div class="product-quantity">
+                    <label for="quantity" style="font-size: 18px;color: #7136d1; margin-bottom: 5px">Quantidade:</label>
+                    <input type="number" id="quantity" name="quantity" value="1" min="1" style="display: center; flex-direction: column;align-items: center;font-size: 18px; 
+                    text-align: center;
+                    width: 50px;
+                    border: 1px solid #ccc;
+                    border-radius: 5px;
+                    padding: 5px;">
+                  </div>
 
                   <data class="card-price" value="150,00">R$150,00</data>
 
@@ -470,6 +546,15 @@
                   <h3 class="h3 card-title">
                     <a href="#">Encordamento Pig Hog 6 Metros Plug em L</a>
                   </h3>
+                  <div class="product-quantity">
+                    <label for="quantity" style="font-size: 18px;color: #7136d1; margin-bottom: 5px">Quantidade:</label>
+                    <input type="number" id="quantity" name="quantity" value="1" min="1" style="display: center; flex-direction: column;align-items: center;font-size: 18px; 
+                    text-align: center;
+                    width: 50px;
+                    border: 1px solid #ccc;
+                    border-radius: 5px;
+                    padding: 5px;">
+                  </div>
 
                   <data class="card-price" value="200,00">R$200,00</data>
 
@@ -506,6 +591,15 @@
                     <a href="#">Baqueta Ahead Drumsticks Work Out Stick WOS para Estudo Mais Pesada que 2B e Base de
                       Alumínio</a>
                   </h3>
+                  <div class="product-quantity">
+                    <label for="quantity" style="font-size: 18px;color: #7136d1; margin-bottom: 5px">Quantidade:</label>
+                    <input type="number" id="quantity" name="quantity" value="1" min="1" style="display: center; flex-direction: column;align-items: center;font-size: 18px; 
+                    text-align: center;
+                    width: 50px;
+                    border: 1px solid #ccc;
+                    border-radius: 5px;
+                    padding: 5px;">
+                  </div>
 
                   <data class="card-price" value="581,00">R$581,00</data>
 
@@ -718,7 +812,7 @@
                   <h3 class="h4 card-title">Frete Gratis</h3>
 
                   <p class="card-text">
-                    PRODUTOS A PARTIR DE <span>R$150</span>
+                    100% GRATIUTO
                   </p>
                 </div>
 
@@ -783,11 +877,7 @@
 
         </div>
       </section>
-
-
-
-
-
+      
       <!-- 
         - #INSTA POST
       -->
@@ -874,11 +964,7 @@
 
     </article>
   </main>
-
-
-
-
-
+  
   <!-- 
     - #FOOTER
   -->
@@ -898,28 +984,9 @@
 
             <li>
               <a href="#" class="social-link">
-                <ion-icon name="logo-facebook"></ion-icon>
+                <ion-icon name="logo-instagram"></ion-icon>
               </a>
             </li>
-
-            <li>
-              <a href="#" class="social-link">
-                <ion-icon name="logo-twitter"></ion-icon>
-              </a>
-            </li>
-
-            <li>
-              <a href="#" class="social-link">
-                <ion-icon name="logo-pinterest"></ion-icon>
-              </a>
-            </li>
-
-            <li>
-              <a href="#" class="social-link">
-                <ion-icon name="logo-linkedin"></ion-icon>
-              </a>
-            </li>
-
           </ul>
 
         </div>
@@ -928,9 +995,7 @@
 
           <ul class="footer-list">
 
-            <li>
-              <p class="footer-list-title">Contato</p>
-            </li>
+            <div class="footer-link-box" id="contato"></div>
 
             <li>
               <address class="footer-link">
